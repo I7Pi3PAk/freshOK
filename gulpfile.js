@@ -25,7 +25,10 @@ function browsersync() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src([
+            'app/scss/style.scss',
+            'app/scss/nice-select.scss'
+        ])
         .pipe(scss({
             outputStyle: 'compressed'
         }))
@@ -41,6 +44,7 @@ function styles() {
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'app/js/jquery.nice-select.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
@@ -86,7 +90,7 @@ function build() {
         .pipe(dest('dist'))
 }
 
-function cleanDist(){
+function cleanDist() {
     return del('dist')
 }
 
@@ -103,6 +107,6 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build); 
+exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching);
