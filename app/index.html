@@ -1,16 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФрешОк</title>
+  <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500&family=Ruda:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__wrapper">
+          <address class="header-top__contact">
+            <a class="header-top__link header-top__link--delivery" href="#">Адрес и время доставки</a>
+            <a class="header-top__link header-top__link--phone" href="#">Горячая линия 24/7</a>
+          </address>
+          <nav class="header-top__nav">
+            <ul class="header-top__list">
+              <li class="header-top__item">
+                <a class="header-top__link" href="#">Доставка</a>
+              </li>
+              <li class="header-top__item">
+                <a class="header-top__link" href="#">О нас</a>
+              </li>
+              <li class="header-top__item">
+                <a class="header-top__link" href="#">Новости</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__wrapper">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип ФрешОк">
+          </a>
+          <select class="catalog">
+            <option value="0" selected>Каталог продуктов</option>
+            <option value="1">Бакалея</option>
+            <option value="2">Молочные продукты</option>
+            <option value="3">Овощи и фрукты</option>
+            <option value="4">Хлеб</option>
+            <option value="5">Мясо</option>
+            <option value="6">Колбаса</option>
+            <option value="7">Рыба</option>
+            <option value="8">Алкоголь</option>
+            <option value="9">Напитки</option>
+            <option value="10">Торты</option>
+            <option value="11">Мясо</option>
+            <option value="12">Чай, кофе</option>
+          </select>
+
+          <form class="search-form">
+            <input type="search" placeholder="Найти в магазине ...">
+            <label>
+              <input type="submit" name value="Поиск">
+            </label>
+          </form>
+          <ul class="header-bottom__list">
+            <li class="header-bottom__item">
+              <a class="header-bottom__link" href="#">
+                <span class="sr-only">меню пользователя</span>
+              </a>
+            </li>
+            <li class="header-bottom__item">
+              <a class="header-bottom__link" href="#">
+                <span class="sr-only">понравившееся</span>
+              </a>
+            </li>
+            <li class="header-bottom__item">
+              <a class="header-bottom__link" href="#">
+                <span class="sr-only">корзина</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
 
 
-<script src="js/main.min.js"></script>
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>
