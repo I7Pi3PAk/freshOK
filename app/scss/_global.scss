@@ -1,9 +1,20 @@
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   @extend %opensans-400;
   font-size: 14px;
   line-height: 1.4;
   color: $title;
   background-color: #ffffff;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .sr-only {
@@ -22,4 +33,79 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 200px;
+  height: auto;
+  width: 100%;
+}
+
+.button {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: $white;
+  padding: 12px 24px;
+  background-color: $green;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #4D800C;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px #E0EDCF;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: center center;
+  border: none;
+  border-radius: 6px;
+  transform: translateY(-50%);
+  font-size: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #E0EDCF;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
+  }
+}
+
+.slick-prev {
+  background-image: url(../images/slide/arrow-left.svg);
+  left: 60px;
+}
+
+.slick-next {
+  background-image: url(../images/slide/arrow-right.svg);
+  right: 60px;
+}
+
+.title {
+  @extend %ruda-600;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title;
 }
