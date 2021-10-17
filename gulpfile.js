@@ -27,7 +27,6 @@ function browsersync() {
 function styles() {
     return src([
             'app/scss/style.scss',
-            'app/scss/nice-select.scss'
         ])
         .pipe(scss({
             outputStyle: 'compressed'
@@ -44,6 +43,8 @@ function styles() {
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-slider/slick/slick.js',
+            'node_modules/mixitup/dist/mixitup.js',
             'app/js/jquery.nice-select.js',
             'app/js/main.js'
         ])
