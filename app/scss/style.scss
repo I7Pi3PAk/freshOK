@@ -6,13 +6,13 @@
 
 .header {
   &__logo {
-    margin-right: 24px;
+    margin-right: 11px;
   }
 }
 
 .header-top {
   @extend %opensans-700;
-  padding: 14px 0;
+  padding: 16px 0;
   background-color: $bg;
   font-size: 13px;
   letter-spacing: 0.03em;
@@ -27,7 +27,7 @@
   &__contact a {
     position: relative;
     font-style: normal;
-    padding-left: 45px;
+    padding-left: 49px;
   }
 
   &__contact a::before {
@@ -35,13 +35,13 @@
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
-    top: -4px;
+    top: -2px;
     width: 32px;
     height: 22px;
   }
 
   &__link--delivery {
-    margin-right: 48px;
+    margin-right: 30px;
   }
 
   &__link--phone {
@@ -50,12 +50,12 @@
 
   &__link--delivery::before {
     background-image: url(../images/icons/delivery.svg);
-    left: 0;
+    left: 6px;
   }
 
   &__link--phone::before {
     background-image: url(../images/icons/tel.svg);
-    left: 10px;
+    left: 16px;
   }
 
   &__list {
@@ -63,7 +63,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 22px;
   }
 
   &__link:hover {
@@ -86,11 +86,11 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 8px;
   }
 
   &__item:last-child {
-    margin-right: 7px;
+    margin-right: -9px;
   }
 
   &__link {
@@ -100,8 +100,8 @@
     background-position: center center;
     background-size: 50%;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     transition: background-color 0.3s;
   }
 
@@ -128,7 +128,7 @@
 }
 
 .catalog {
-  margin-right: 30px;
+  margin-right: 9px;
 }
 
 .catalog:hover,
@@ -137,7 +137,7 @@
 }
 
 .catalog.nice-select {
-  max-width: 250px;
+  max-width: 240px;
   width: 100%;
   height: 50px;
   border-radius: 6px;
@@ -217,7 +217,7 @@
   height: 50px;
   width: 100%;
   letter-spacing: 0.03em;
-  margin-right: 58px;
+  margin-right: 25px;
 
   &::before {
     position: absolute;
@@ -230,7 +230,7 @@
     padding: 20px;
     width: 20px;
     height: 20px;
-    left: 9px;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
@@ -259,7 +259,7 @@
   &__btn {
     margin: 0;
     height: 50px;
-    padding: 15px 52px;
+    padding: 15px 53px;
     text-transform: uppercase;
     color: $white;
     background-color: $bg;
@@ -292,7 +292,7 @@
   }
 
   &__inner {
-    padding: 24px;
+    padding: 27px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
   }
@@ -300,10 +300,11 @@
   &__title {
     @extend %ruda-900;
     font-size: 60px;
+    line-height: 1.3;
     text-transform: uppercase;
     color: $accent;
     max-width: 761px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 
     span {
       color: #CF3E3B;
@@ -322,31 +323,31 @@
   padding: 48px 0 29px;
   background-color: #F6F6F6;
 
-  &__wrapper {
-    display: flex;
-    justify-content: center;
+  &__wrapper{
+    max-width: 911px;
+    margin: 0 auto;
   }
 
   &__list {
-    padding-left: 74px;
-    background-repeat: no-repeat;
-
-  }
-
-  &__list:not(:last-child) {
-    margin-right: 66px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item {
     @extend %opensans-600;
+    max-width: 264px;
+    width: 100%;
+    margin-right: -11px;
+    padding-left: 74px;
     font-size: 16px;
     line-height: 1.5;
     color: $title;
+    background-repeat: no-repeat;
 
     span {
+      @extend %opensans-400;
       display: block;
       max-width: 190px;
-      @extend %opensans-400;
       font-size: 14px;
       line-height: 1.6;
       color: $accent;
@@ -358,10 +359,9 @@
 
 .top {
   padding: 72px 0;
-  align-items: center;
-  text-align: center;
-
+  
   &__title {
+    text-align: center;
     margin-bottom: 30px;
   }
 
@@ -401,6 +401,7 @@
 
   &__card {
     position: relative;
+    text-align-last: left;
     border: 1px solid rgba(17, 17, 17, 0.2);
     border-radius: 6px;
     max-width: 300px;
@@ -421,28 +422,28 @@
     font-size: 10px;
     letter-spacing: 0.03em;
     color: $white;
-    padding: 3px 6px;
+    padding: 2px 4px;
     border-radius: 6px;
   }
 
   &__new {
     display: none;
     top: 12px;
-    left: 12px;
+    left: 17px;
     background-color: $green;
   }
 
   &__sale {
     display: none;
-    top: 40px;
-    left: 12px;
+    top: 33px;
+    left: 17px;
     background-color: #CF3E3B;
   }
 
   &__hit {
     display: none;
-    top: 12px;
-    left: 12px;
+    top: 11px;
+    left: 17px;
     background-color: #FF7A00;
   }
 
@@ -484,7 +485,7 @@
 
   &__heart {
     display: block;
-    margin: 17px 12px 0 auto;
+    margin: 15px 8px 0 auto;
   }
 
   &__heart:hover {
@@ -494,17 +495,17 @@
   }
 
   &__img {
-    max-width: 300px;
-    height: 215px;
-    object-fit: cover;
-    margin-bottom: 18px;
+    max-width: 298px;
+    height: 230px;
+    object-fit: contain;
+    margin-bottom: 15px;
   }
 
   &__card-title {
     @extend %opensans-600;
     letter-spacing: 0.03em;
     color: $title;
-    height: 70px;
+    height: 65px;
     margin-left: 18px;
     overflow: auto;
   }
@@ -512,7 +513,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    max-width: 264px;
+    max-width: 250px;
     margin: 0 auto;
     align-items: end;
   }
@@ -532,6 +533,7 @@
     height: 32px;
     background-color: $green;
     border-radius: 3px;
+    transform: translateX(35%);
   }
 
   &__cart-img {
@@ -539,10 +541,13 @@
     object-fit: contain;
   }
 
-  &__btn {
-    display: inline-flex;
-    margin: 0 auto;
-    padding: 12px 24px;
+  &__btn{
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 11px 26px;
     font-size: 18px;
     letter-spacing: 0.03em;
     color: $green;
@@ -551,14 +556,16 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   }
 
-  &__btn:hover {
+  &__link:hover {
     background-color: #EFF6E7;
   }
-  &__btn:active {
+
+  &__link:active {
     box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
     color: rgba(99, 166, 14, 0.5);
   }
-  &__btn:focus{
+
+  &__link:focus {
     box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
     outline: transparent;
   }
