@@ -1,0 +1,74 @@
+.banners {
+  padding-bottom: 72px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    padding: 76px 0 79px 32px;
+  }
+  
+  &__big {
+    max-width: 630px;
+  }
+
+  &__small {
+    max-width: 300px;
+  }
+
+  &__sub-title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    &--white{
+      color: $white;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+    &--dark{
+      color: $accent;
+    }
+  }
+  &__title {
+    font-family: $ruda;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    @include line-clamp2;
+    &--white{
+      color: $white;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+    &--dark{
+      color: $accent;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 100%;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    &--white{
+      color: $white;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      border-bottom: 2px solid $white;
+    }
+    &--dark{
+      color: $accent;
+      border-bottom: 2px solid $accent;
+    }
+  }
+}
