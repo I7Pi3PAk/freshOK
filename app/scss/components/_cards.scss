@@ -37,17 +37,54 @@
   }
 
   &__img-wrapper {
-    padding-top: 55px;
+    margin-top: 55px;
+  }
+  
+  &__img-link {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    &:hover::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    &:hover::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      background-image: url(../../images/content/loupe.png);
+      background-repeat: no-repeat;
+    }
   }
 
   &__img {
     max-width: 298px;
+    width: 100%;
     height: 224px;
     object-fit: contain;
+
   }
 
   &__bottom {
     margin: 15px 18px;
+  }
+
+  &__card-title {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: $title;
+    min-height: 62px;
+    @include line-clamp3;
   }
 
   &__inner {
@@ -55,6 +92,26 @@
     justify-content: space-between;
     min-height: 38px;
     align-items: end;
+  }
+
+  &__price {
+    color: $accent;
+  }
+
+  &__price--old {
+    position: relative;
+    color: #C1C1C1;
+    letter-spacing: 0.03em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #C1C1C1;
+      width: 100%;
+      transform: rotate(-14.99deg);
+      bottom: 8px;
+      left: 0;
+    }
   }
 
   &__cart {

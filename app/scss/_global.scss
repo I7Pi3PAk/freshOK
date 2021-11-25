@@ -36,7 +36,7 @@ body {
   padding: 0 15px;
 }
 
-.logo {
+.logo__img {
   display: inline-block;
   width: 200px;
   height: 60px;
@@ -156,36 +156,6 @@ body {
   }
 }
 
-.cards {
-  &__card-title {
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    color: $title;
-    min-height: 62px;
-    @include line-clamp3;
-  }
-
-  &__price {
-    color: $accent;
-  }
-
-  &__price--old {
-    position: relative;
-    color: #C1C1C1;
-    letter-spacing: 0.03em;
-
-    &::after {
-      content: "";
-      position: absolute;
-      border: 1px solid #C1C1C1;
-      width: 100%;
-      transform: rotate(-14.99deg);
-      bottom: 8px;
-      left: 0;
-    }
-  }
-}
-
 .badges {
   position: absolute;
   top: 12px;
@@ -231,11 +201,11 @@ body {
 }
 
 .heart {
-  & path {
+   path {
     transition: fill 0.3s ease;
   }
 
-  &:hover path {
+  &:hover path{
     fill: #FFB800;
   }
 }

@@ -12,8 +12,45 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+// const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
 
+// function svgMono() {
+//     return src(['app/images/iconsMono/*.svg'])
+//         .pipe(svgSprite({
+//             mode: {
+//                 symbol: {
+//                     sprite: "../sprite.svg"
+//                 },
+//             },
+//             shape: {
+//                 transform: [{
+//                     svgo: {
+//                         plugins: [{
+//                             removeAttrs: {
+//                                 attrs: ['fill', 'stroke.*'],
+//                             }
+//                         }]
+//                     }
+//                 }]
+//             }
+//         }))
+//         .pipe(dest('app/images/iconsMono'))
+//         .pipe(browserSync.stream())
+// }
+
+// function svgMulty() {
+//     return src(['app/images/iconsMulty/*.svg'])
+//         .pipe(svgSprite({
+//             mode: {
+//                 symbol: {
+//                     sprite: "../sprite.svg"
+//                 },
+//             },
+//         }))
+//         .pipe(dest('app/images/iconsMulty'))
+//         .pipe(browserSync.stream())
+// }
 
 function browsersync() {
     browserSync.init({
@@ -97,6 +134,7 @@ function cleanDist() {
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+    // watch(['app/images/icons/*.svg', '!app/images/icons/sprite.svg'], svg);
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
@@ -105,6 +143,8 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
+// exports.svgMono = svgMono;
+// exports.svgMulty = svgMulty;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
