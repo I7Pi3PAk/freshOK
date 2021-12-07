@@ -11,3 +11,13 @@
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }
+
+@mixin fs($min, $max) {
+  font-size: calc($min + $max * ((100vw - 375px) / (1920 - 375)));
+}
+
+@mixin r($width) {    
+  @media only screen and (max-width: $width) {
+      @content;
+  }
+}

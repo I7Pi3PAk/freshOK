@@ -41,9 +41,9 @@
   &__title {
     font-family: $ruda;
     font-weight: 600;
-    font-size: 30px;
+    @include fs(24px, 6);
     line-height: 1.4;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     @include line-clamp2;
     &--white{

@@ -41,6 +41,18 @@ body {
   width: 200px;
   height: 60px;
   object-fit: contain;
+
+  @include r(960px){
+    display: none;
+  }
+}
+
+.logo__img-mini{
+  display: none;
+  @include r(960px){
+    display: block;
+    margin-right: 10px;
+  }
 }
 
 .button {
@@ -120,6 +132,10 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s;
     outline: transparent;
+
+    @include r(1024px){
+      padding: 15px 34px;
+    }
 
     &:hover {
       background-color: rgba(49, 53, 43, 0.85);
@@ -213,7 +229,7 @@ body {
 .title {
   font-family: $ruda;
   font-weight: 600;
-  font-size: 32px;
+  @include fs(24px, 8);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $title;
