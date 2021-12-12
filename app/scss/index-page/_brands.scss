@@ -1,0 +1,15 @@
+.brands{
+  padding: 72px 0;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__item{
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

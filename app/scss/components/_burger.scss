@@ -1,0 +1,134 @@
+.burger {
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #31352B;
+  
+  &__btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    
+    @include r(854px) {
+      display: block;
+    }
+  }
+  
+  &__menu {
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+    left: -200%;
+    z-index: 10;
+    transition: left 0.3s ease-in-out;
+    &.active{
+      left: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    padding: 26px 26px 26px 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &__close {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__login {
+    padding: 15px 0;
+    background-color: #63A60E;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+
+  &__login-link:first-child {
+    margin-left: 15px;
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(../images/icons/user.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 25px;
+      height: 32px;
+      top: -5px;
+      left: 0;
+    }
+  }
+
+  &__product {
+    @include r(854px) {
+      display: block;
+      width: 100%;
+    }
+
+    button {
+      border-radius: 0;
+    }
+  }
+
+  &__contact {
+    padding: 26px 0;
+    background-color: $white;
+    font-style: normal;
+    border-top: 1px solid rgba(193, 193, 193, 0.3);
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  }
+
+  &__media-link {
+    display: block;
+    margin-left: 15px;
+    padding-left: 39px;
+    margin-bottom: 18px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 24px;
+    }
+  }
+
+  &__media-phone::before {
+    background-image: url(../images/icons/tel-black.svg);
+    height: 24px;
+  }
+
+  &__media-address::before {
+    background-image: url(../images/icons/location.svg);
+    height: 33px;
+  }
+
+  &__social-list {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__list {
+    background-color: $white;
+    padding: 24px 0 24px 15px;
+  }
+
+  &__item:not(:last-child){
+    margin-bottom: 15px;
+  }
+}
