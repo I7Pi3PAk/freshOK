@@ -1,6 +1,9 @@
 .promo {
   padding: 72px 0;
   background-color: #F5F5F5;
+  @include r(800px){
+    padding: 40px 0;
+  }
 
   &__title {
     text-align: center;
@@ -23,6 +26,17 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 50px;
+    @include r(1200px){
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 10px;
+    }
+    @include r(900px){
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 15px;
+    }
+    @include r(600px){
+     grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -34,6 +48,15 @@
     max-width: 300px;
     max-height: 124px;
     transition: border 0.3s ease;
+    @include r(1200px){
+      max-width: 30vw;
+     }
+    @include r(900px){
+     max-width: 45vw;
+    }
+    @include r(600px){
+     max-width: 100vw;
+    }
 
     &:hover {
       border: 1px solid #63A60E;
@@ -98,6 +121,9 @@
       color: #C1C1C1;
       padding-top: 7px;
       margin-right: 20px;
+      @include r(630px){
+        margin-right: 5px;
+      }
 
       &::after {
         content: "";

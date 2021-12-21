@@ -1,8 +1,15 @@
 .banners {
   padding-bottom: 72px;
+  @include r(960px){
+    padding-bottom: 20px;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include r(1280px){
+      justify-content: center;
+    }
   }
 
   &__inner {
@@ -11,16 +18,24 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    margin-right: 5px;
+    margin-bottom: 10px;
     width: 100%;
     padding: 76px 0 79px 32px;
   }
   
   &__big {
     max-width: 630px;
+    @include r(960px){
+      max-width: 100vw;
+    }
   }
 
   &__small {
     max-width: 300px;
+    @include r(960px){
+      max-width: 100vw;
+    }
   }
 
   &__sub-title {

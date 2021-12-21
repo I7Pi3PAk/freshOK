@@ -41,10 +41,6 @@ body {
   width: 200px;
   height: 60px;
   object-fit: contain;
-
-  @include r(960px){
-    display: none;
-  }
 }
 
 .logo__img-mini{

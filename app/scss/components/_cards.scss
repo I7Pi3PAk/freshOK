@@ -1,6 +1,10 @@
 .cards {
   padding: 72px 0;
 
+  @include r(768px) {
+    padding: 20px 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 30px;
@@ -10,6 +14,17 @@
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
+    flex-wrap: wrap;
+
+    @include r(512px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include r(512px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -21,6 +36,16 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 50px;
+
+    @include r(1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r(854px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 20px;
+    }
   }
 
   &__card {
@@ -31,6 +56,10 @@
     max-height: 409px;
     transition: border 0.3s ease;
 
+    @include r(854px){
+      max-width: 50vw;
+    }
+
     &:hover {
       border: 1px solid #63A60E;
     }
@@ -39,11 +68,12 @@
   &__img-wrapper {
     margin-top: 55px;
   }
-  
+
   &__img-link {
     position: relative;
     display: block;
     cursor: pointer;
+
     &:hover::before {
       position: absolute;
       content: '';
@@ -53,7 +83,7 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.1);
     }
-    
+
     &:hover::after {
       position: absolute;
       content: '';

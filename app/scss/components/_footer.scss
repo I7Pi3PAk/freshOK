@@ -9,12 +9,28 @@
   &__logo {
     display: block;
     margin-bottom: 27px;
+    @include r(854px){
+      text-align: center;
+    }
   }
 
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    @include r(854px){
+      flex-direction: column;
+      align-items: center;
+      .footer__copy{
+        order: 1;
+      }
+      .footer__contact{
+        order: -1;
+      }
+      .footer__inner{
+        order: 2;
+      }
+    }
   }
 
   &__form {
@@ -22,6 +38,12 @@
     margin-right: 50px;
     flex-wrap: wrap;
     max-width: 320px;
+    @include r(1200px){
+      margin-right: 5px;
+    }
+    @include r(375px){
+      margin: 0;
+    }
   }
 
   &__descr {
@@ -37,6 +59,9 @@
     border: 1px solid transparent;
     border-radius: 6px 0px 0px 6px;
     outline: transparent;
+    @include r(375px){
+      max-width: 160px;
+    }
 
     &::placeholder {
       color: #4F4F4F;
@@ -52,9 +77,20 @@
     height: 40px;
   }
 
+  &__links{
+    @include r(854px){
+      margin-bottom: 50px;
+    }
+  }
+
   &__list {
     column-count: 3;
     column-gap: 74px;
+
+    @include r(1200px) {
+      column-count: 2;
+      column-gap: 40px;
+    }
   }
 
   &__item {
@@ -85,6 +121,9 @@
 
   &__social-list {
     display: flex;
+    @include r(854px){
+      margin-bottom: 26px;
+    }
   }
 
   &__social-item:not(:last-child) {
@@ -108,7 +147,7 @@
   &__bottom {
     padding: 28px 0;
   }
-  
+
   &__copy {
     text-transform: uppercase;
     color: $white;
@@ -116,6 +155,9 @@
 
   &__img {
     display: flex;
+    @include r(854px){
+      margin-bottom: 25px;
+    }
   }
 
   &__visa {
