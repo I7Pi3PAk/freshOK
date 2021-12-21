@@ -19,13 +19,23 @@
     align-items: center;
   }
 
+  &__logo{
+    .logo__img{
+      @include r(960px){
+        display: none;
+      }
+    }
+  }
+
   &__top-link--delivery,
   &__top-link--phone {
     position: relative;
     padding-left: 45px;
 
     @include r(854px) {
-      padding-left: 31px;
+      position: absolute;
+      right: 10px;
+      top: 15px;
     }
 
     &::before {
@@ -36,10 +46,6 @@
       top: -3px;
       width: 32px;
       height: 22px;
-
-      @include r(854px) {
-        top: -12px;
-      }
     }
   }
 
@@ -47,14 +53,13 @@
   &__top-link--delivery {
     margin-right: 12px;
 
-    @include r(854px) {
-      margin-right: 0;
-    }
-
     &::before {
       background-image: url(../images/icons/delivery.svg);
       left: 2px;
-      fill: #fff;
+    }
+
+    @include r(854px) {
+      margin-right: 50px;
     }
   }
 
@@ -67,7 +72,7 @@
 
   &__list {
     display: flex;
-    
+
     @include r(854px) {
       font-size: 0;
     }
@@ -167,11 +172,12 @@
     flex-direction: column;
     top: -200vh;
     right: 0;
-    min-width: 475px;
+    max-width: 475px;
+    width: 100%;
     height: 100vh;
     transition: top 0.3s ease;
     background-color: $white;
-    
+
     &.active {
       top: -50px;
       z-index: 10;
@@ -224,6 +230,10 @@
     background: $white;
     border: 1px solid #C1C1C1;
     border-radius: 3px;
+
+    @include r(480px) {
+      display: block;
+    }
   }
 
   &__cart-del {
@@ -238,6 +248,14 @@
     right: 12px;
     width: 12px;
     height: 12px;
+  }
+
+  &__cart-img {
+    display: flex;
+
+    img {
+      margin-right: 30px;
+    }
   }
 
   &__cart-title {
@@ -258,9 +276,6 @@
     color: $accent;
   }
 
-  &__cart-price--total {
-    margin-top: 42px;
-  }
 
   &__cart-bottom--inner {
     display: flex;
@@ -292,6 +307,18 @@
   max-height: 24px;
   margin-top: 40px;
 
+  div {
+    display: flex;
+    // padding: 0;
+    // margin: 0;
+  }
+
+  @include r(480px) {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__btn {
     padding: 0;
     margin: 0;
@@ -307,20 +334,23 @@
 }
 
 .quantity {
-  max-width: 30px;
+  max-width: 36px;
+  width: 100%;
   text-align: center;
   border: none;
   background-color: rgba(99, 166, 14, 0.1);
 }
 
 .bt_plus {
-  margin-right: 12px;
+  margin-right: 32px;
+
 }
 
 .select-product {
   position: relative;
   margin-right: 20px;
-  @include r(854px){
+
+  @include r(854px) {
     display: none;
   }
 
@@ -431,8 +461,8 @@
   letter-spacing: 0.03em;
   margin-right: 25px;
   transition: left 0.3s ease-in-out;
-  
-  
+
+
   @include r(854px) {
     position: absolute;
     max-width: 97%;

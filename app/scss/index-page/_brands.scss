@@ -1,14 +1,26 @@
-.brands{
+.brands {
   padding: 72px 0;
-  &__list{
+
+  @include r(720px) {
+    padding: 20px 0;
+  }
+
+  &__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
-  &__item{
+
+  &__item {
     opacity: 0.5;
     transition: opacity 0.3s ease;
-    &:hover{
+
+    @include r(720px) {
+      margin: 5px;
+    }
+
+    &:hover {
       opacity: 1;
     }
   }

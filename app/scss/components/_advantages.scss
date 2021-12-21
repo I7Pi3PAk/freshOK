@@ -6,12 +6,15 @@
     max-width: 911px;
     margin: 0 auto;
   }
-
+  
   &__list {
     display: flex;
     justify-content: space-between;
+    @include r(768px){
+      flex-wrap: wrap;
+    }
   }
-
+  
   &__item {
     font-weight: 600;
     max-width: 253px;
@@ -22,13 +25,20 @@
     color: $title;
     background-repeat: no-repeat;
     @include line-clamp3;
-
+    
+    @include r(768px){
+     margin-bottom: 30px;
+    }
     span {
       display: block;
       max-width: 190px;
       font-size: 14px;
       line-height: 1.6;
       color: $accent;
+      @include r(768px){
+      max-width: 100vw;
+      margin-bottom: 5px;
+      }
     }
   }
 }
